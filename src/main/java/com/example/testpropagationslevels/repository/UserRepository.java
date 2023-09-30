@@ -1,4 +1,4 @@
-package com.example.testpropagationslevels;
+package com.example.testpropagationslevels.repository;
 
 import com.example.testpropagationslevels.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;

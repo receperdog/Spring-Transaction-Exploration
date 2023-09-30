@@ -1,13 +1,10 @@
 package com.example.testpropagationslevels.service;
 
-import com.example.testpropagationslevels.UserRepository;
 import com.example.testpropagationslevels.model.User;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-
-import java.util.Objects;
 
 @Service
 @AllArgsConstructor
@@ -15,6 +12,7 @@ public class MultiService {
     private UserServiceRequiresNew userServiceRequiresNew;
     private UserServiceRequired userServiceRequired;
 
+    @Transactional(propagation = Propagation.REQUIRES_NEW)
     public void testPropagation() {
         try {
             var existedLastUser = userServiceRequiresNew.getCountOfUser();

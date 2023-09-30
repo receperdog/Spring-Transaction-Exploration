@@ -1,9 +1,7 @@
 package com.example.testpropagationslevels.service;
 
-import com.example.testpropagationslevels.UserRepository;
+import com.example.testpropagationslevels.repository.UserRepository;
 import com.example.testpropagationslevels.model.User;
-import lombok.AllArgsConstructor;
-import lombok.Data;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
